@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dengiaothong</title>
+    <style>
+        .bt {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+        button {
+            margin: 5px;
+        }
+        .container {
+            margin: 0 auto;
+            border: 1px solid cornflowerblue;
+            width: 150px;
+            height: 320px;
+            padding: 70px;
+            background-color: #969494;
+        }
+        .hinhtron {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black; 
+            background-color: #fff; 
+            border-radius: 100px;
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bt">
+        <button type="button" onclick="getRed()">red</button>
+        <button type="button" onclick="getYellow()">yellow</button>
+        <button type="button" onclick="getGreen()">green</button>  
+    </div>
+    <div class="container">
+        <div id="dendo" class="hinhtron"></div>
+        <div id="denvang" class="hinhtron"></div>
+        <div id="denxanh" class="hinhtron"></div>
+    </div>
+    <script>
+        var maudo = document.getElementById("dendo");
+        var mauvang = document.getElementById("denvang");
+        var mauxanh = document.getElementById("denxanh");
+        
+        function getRed() {
+            clearLights();
+            maudo.style.backgroundColor = "red"; 
+        }
+        function getGreen() {
+            clearLights();
+            mauxanh.style.backgroundColor = "green"; 
+        }
+        function getYellow() {
+            clearLights();
+            mauvang.style.backgroundColor = "yellow";
+        }
+        function clearLights() {
+            document.getElementById('dendo').style.backgroundColor = "#fff"; 
+            document.getElementById('denvang').style.backgroundColor = "#fff"; 
+            document.getElementById('denxanh').style.backgroundColor = "#fff"; 
+        }
+    </script>
+</body>
+</html>
